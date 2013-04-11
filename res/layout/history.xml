@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="328dp"
+        android:text="
+ROT13 (&quot;rotație de 13 poziții&quot;, câteodată scris ca și ROT-13) este o metodă simplă de codificare folosită în special pe forum-urile online pentru a masca spoilere, glume, soluțiile unui puzzle, precum și materiale ofensive.
+ROT13 a fost descris ca și &quot;Echivalentul pe internet a revistelor care imprimă răspunsul la întrebări intors&quot;. Acest tip de codificare este un exemplu de Cifru Cezar folosit în Roma antică. 
+Codificarea în ROT13 a unui text cere o examinare a caracterelor alfabetului și înlocuirea fiecărei litere cu litera care se află cu 13 poziții în fața ei în alfabet, ascunzând tot textul dacă este nevoie.
+A devine N, B devine O, și tot așa până la M, care devine Z, apoi regula continuă cu începutul alfabetului: N devine A, O devine B, și continuă până la Z, care devine M.
+Numai literele care apar în alfabetul englez sunt codificate; numerele, simbolurile, spațiile, și toate celelalte caractere sunt lăsate neschimbate.
+Deoarece sunt 26 de litere în alfabetul englez și 26 = 2 x 13, ROT13 este propriul lui invers."
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</ScrollView>
