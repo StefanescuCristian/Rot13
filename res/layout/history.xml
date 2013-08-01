@@ -1,20 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ScrollView1"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
-        android:layout_height="328dp"
-        android:text="
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:autoLink="web"
+        android:enabled="true"
+        android:gravity="fill_vertical"
+        android:linksClickable="true"
+        android:scrollHorizontally="true"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical"
+        android:text="\n
 ROT13 (&quot;rotație de 13 poziții&quot;, câteodată scris ca și ROT-13) este o metodă simplă de codificare folosită în special pe forum-urile online pentru a masca spoilere, glume, soluțiile unui puzzle, precum și materiale ofensive.
+\n
 ROT13 a fost descris ca și &quot;Echivalentul pe internet a revistelor care imprimă răspunsul la întrebări intors&quot;. Acest tip de codificare este un exemplu de Cifru Cezar folosit în Roma antică. 
-Codificarea în ROT13 a unui text cere o examinare a caracterelor alfabetului și înlocuirea fiecărei litere cu litera care se află cu 13 poziții în fața ei în alfabet, ascunzând tot textul dacă este nevoie.
-A devine N, B devine O, și tot așa până la M, care devine Z, apoi regula continuă cu începutul alfabetului: N devine A, O devine B, și continuă până la Z, care devine M.
-Numai literele care apar în alfabetul englez sunt codificate; numerele, simbolurile, spațiile, și toate celelalte caractere sunt lăsate neschimbate.
-Deoarece sunt 26 de litere în alfabetul englez și 26 = 2 x 13, ROT13 este propriul lui invers."
+\n\n
+Codificarea în ROT13 a unui text cere o examinare a caracterelor alfabetului și înlocuirea fiecărei litere cu litera care se află cu 13 poziții în fața ei în alfabet, ascunzând tot textul dacă este nevoie.\nA devine N, B devine O, și tot așa până la M, care devine Z, apoi regula continuă cu începutul alfabetului: N devine A, O devine B, și continuă până la Z, care devine M.\n
+Numai literele care apar în alfabetul englez sunt codificate; numerele, simbolurile, spațiile, și toate celelalte caractere sunt lăsate neschimbate.\nDeoarece sunt 26 de litere în alfabetul englez și 26 = 2 x 13, ROT13 este propriul lui invers.
+\n\n
+Folosing această proprietate, putem folosi o singura functie pentru codare sau decodare. Astfel, un text codat în ROT13 poate fi decodat folosind același algoritm utilizat pentru codarea textului original.
+\n\n
+https://ro.wikipedia.org/wiki/ROT13
+\n\n"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
-</ScrollView>
+</LinearLayout>

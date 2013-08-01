@@ -6,16 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
-
-    <Button
-        android:id="@+id/buttonCod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="70dp"
-        android:text="Codeaza/decodeaza textul" />
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText" >
 
     <EditText
         android:id="@+id/insert_Text"
@@ -24,10 +16,13 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:ems="10"
-        android:hint="Scrieti textul codat/decodat"
+        android:hint="Scrieti textul pt. codat/decodat"
         android:inputType="textMultiLine"
+        android:linksClickable="false"
         android:maxLines="4"
         android:selectAllOnFocus="true" />
+    
+    	<requestFocus />
 
     <EditText
         android:id="@+id/result_Text"
@@ -40,16 +35,24 @@
         android:ems="10"
         android:hint="Textul decodat/codat apare aici"
         android:inputType="textMultiLine"
-        android:maxLines="4" >
+        android:maxLines="4" 
+        android:selectAllOnFocus="true" >
 
-        <requestFocus />
     </EditText>
+
+    <Button
+        android:id="@+id/buttonCod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/insert_Text"
+        android:layout_centerHorizontal="true"
+        android:text="@string/codeaza_decodeaza_textul" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/result_Text"
         android:layout_centerHorizontal="true"
         android:text="Istoria ROT13" />
 
