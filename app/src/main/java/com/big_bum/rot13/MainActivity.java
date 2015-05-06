@@ -6,7 +6,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import com.androidquery.AQuery;
 
@@ -20,19 +19,23 @@ private AQuery aq;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        Button button2 = (Button) findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), history.class);
-                startActivityForResult(myIntent, 0);
-            }
-        });
+        //Button button2 = (Button) findViewById(R.id.button2);
+        //button2.setOnClickListener(new View.OnClickListener() {
+
+        //}
+        //);
         
         aq = new AQuery(this);
         aq.id(R.id.buttonCod).clicked(this, "clickButton");
+        aq.id(R.id.button2).clicked(this, "onClick");
         
     }
-	
+
+    public void onClick(View view) {
+        Intent myIntent = new Intent(view.getContext(), history.class);
+        startActivityForResult(myIntent, 0);
+    }
+
 	
 	public void clickButton(View button){
 		String text = getText();
@@ -42,7 +45,7 @@ private AQuery aq;
 	}
 
 	
-	public String Rot13(String text) {
+	private String Rot13(String text) {
 		String s = getText();
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 	    System.setOut(new PrintStream(baos));
@@ -55,11 +58,11 @@ private AQuery aq;
             System.out.print(c);
 	        }
 	    String ret = baos.toString();
-	    return ret;		
+	    return ret;
 	}
 
 
-	public String getText(){
+	private String getText(){
     	String r = aq.id(R.id.insert_Text).getText().toString();
     	return r;
 }
